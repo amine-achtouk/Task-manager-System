@@ -48,7 +48,7 @@ const Register = () => {
         <input
           id="username"
           type="text"
-          placeholder="johndoe123"
+          placeholder="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
@@ -60,7 +60,7 @@ const Register = () => {
         <input
           id="email"
           type="email"
-          placeholder="name@company.com"
+          placeholder="name@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -72,7 +72,7 @@ const Register = () => {
         <input
           id="password"
           type="password"
-          placeholder="Must be 8+ characters"
+          placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
