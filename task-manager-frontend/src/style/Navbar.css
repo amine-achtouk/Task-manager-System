@@ -1,0 +1,138 @@
+/* The Floating Dock */
+.glass-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  z-index: 1000;
+  
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  padding: 10px 24px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand/Logo */
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #1e293b;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #6366f1;
+}
+
+/* Links & Items */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: #1e293b;
+}
+
+/* Underline Animation */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #6366f1;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* User Section & Profile Badge */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.user-badge {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.username-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+/* Buttons */
+.logout-button {
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+.register-pill {
+  background: #6366f1;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
+}
+
+.register-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -5px rgba(99, 102, 241, 0.5);
+}
